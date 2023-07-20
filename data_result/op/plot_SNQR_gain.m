@@ -38,6 +38,7 @@ set(gca, 'XTick', x_ticks)
 set(gca, 'XScale', 'log');  % Set X-axis to logarithmic scale
 set(gca, 'XTickLabel', x_ticks);  % Set X-axis tick labels to the corresponding values
 
+x_ticks = 10.^(1 :1:15);
 load('GBW1');
 figure();
 x1=result(:,1);
@@ -49,6 +50,9 @@ plot(x1,y1,'-*',x1,y2,'r-o');
 legend('Opamp1 with ¦Â=3', 'Opamp2 with ¦Â=3');
 xlabel("GBW[Hz]");
 ylabel('SNDR[dB]');
+set(gca, 'XTick', x_ticks)
+set(gca, 'XScale', 'log');  % Set X-axis to logarithmic scale
+set(gca, 'XTickLabel', x_ticks);  % Set X-axis tick labels to the corresponding values
 
 
 load('out');
