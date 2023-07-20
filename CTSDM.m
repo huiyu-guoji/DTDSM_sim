@@ -38,11 +38,11 @@ disp(s7);
 %理想模型能达到的指标
 ntf=synthesizeNTF(order,osr,opt,H_inf,fb);
 ntf.Ts=1/fs;
-% [snr,amp] = simulateSNR(ntf,osr);
-% plot(amp,snr);
-% %bode(ntf);
-% xlabel('Input Amplitude/dBFS');
-% ylabel('SNDR/dB');
+[snr,amp] = simulateSNR(ntf,osr);
+plot(amp,snr,'-*');
+%bode(ntf);
+xlabel('Input Amplitude/dBFS');
+ylabel('SNDR/dB');
 
 
 [a,g,b,c] = realizeNTF(ntf,'CIFF');

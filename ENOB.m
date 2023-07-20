@@ -27,4 +27,4 @@ set(gca, 'XTick', x_ticks);  % Set X-axis ticks to 2, 4, 8, 16, and so on
 set(gca, 'XTickLabel', x_ticks);  % Set X-axis tick labels to the corresponding values
 
 grid on;  % Display grid
-title('1-Bit Quantization');  % Add title
+title('2-Bit Quantization');  % Add title
